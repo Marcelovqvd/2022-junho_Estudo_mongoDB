@@ -1,10 +1,14 @@
 {
   "name": "users_api_mongodv",
   "version": "1.0.0",
-  "main": "index.js",
+  "type": "module",
+  "main": "app.js",
   "repository": "git@github.com:Marcelovqvd/users_API_mongoDB.git",
   "author": "Marcelo <marcelovqvd@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "dev": "nodemon src/app.js"
+  },
   "dependencies": {
     "express": "^4.17.3"
   },
