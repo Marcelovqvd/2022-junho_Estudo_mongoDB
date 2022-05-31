@@ -3,22 +3,21 @@
 Estudo de desenvolvimento de API Rest com banco de dados MongoDB
 
 - endpoints GET/POST/PUT/DELETE
-- Documentação utilizando swagger.
-- docker/compose.
-- postgres.
+- Documentação utilizando swagger
+- Docker/docker-compose
+- MongoDB
+- Knex
 
 </br>
 
 ## Regras
 
-- Javascript.
-- Salvar (email, senha).
+- Javascript
+- Salvar (email, senha)
 - Cada usuário deverá ter um ID único
-- Gravar as informações no banco.
-- Validações.
-- Knex
-- Express
-- Postgres
+- Gravar as informações no banco
+- Validações
+
 
 serviço de API RESTFUL usando nodejs express
 
