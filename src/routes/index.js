@@ -1,9 +1,9 @@
 import { Router } from 'express'
 
-import { usersRoutes } from './Users.routes.js'
+import { goalRoutes } from './goalsRoutes.js'
 
 const router = Router()
 
-router.use("/users", usersRoutes)
+router.use("/", goalRoutes)
 
 export { router }
