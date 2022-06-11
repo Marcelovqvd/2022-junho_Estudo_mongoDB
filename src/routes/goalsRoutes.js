@@ -1,14 +1,11 @@
 import { Router } from 'express'
+import { getGoals, setGoal } from '../controllers/goalController.js'
 
 const goalRoutes = Router()
 
-goalRoutes.get("/", (request, response) => {
-  return response.status(200).json({msg: 'Get goals'})
-})
+goalRoutes.get("/", getGoals)
 
-goalRoutes.post("/", (request, response) => {
-  return response.status(200).json({msg: 'Set goals'})
-})
+goalRoutes.post("/", setGoal)
 
 goalRoutes.put("/:id", (request, response) => {
   return response.status(200).json({msg: `Update goal ${require.params.id}`})
