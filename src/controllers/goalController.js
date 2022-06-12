@@ -3,6 +3,12 @@ const getGoal = (request, response) => {
 }
 
 const setGoal = (request, response) => {
+  const name = request.body.name
+
+    if (!name) {
+      throw new Error('Insert name')
+    }
+
     return response.status(200).json({msg: 'Set goals'})
 }
 
