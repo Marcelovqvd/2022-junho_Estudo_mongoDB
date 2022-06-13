@@ -1,15 +1,18 @@
-const getGoal = (request, response) => {
-    return response.status(200).json({msg: 'Get goals'})
+import { goal } from '../models/goalModel.js'
+
+const getGoal = async (request, response) => {
+    const goals = await goal.find()
+    return response.status(200).json(goals)
 }
 
-const setGoal = (request, response) => {
-  const name = request.body.name
+const setGoal = async (request, response) => {
+  // const { newGoal } = request.body
 
-    if (!name) {
-      throw new Error('Insert name')
-    }
+    const createGoal = goal.create({
+      newGoal: { user: 'Marcelo', text: 'texto'}
+    })
 
-    return response.status(200).json({msg: 'Set goals'})
+    return response.status(200).json('createGoal')
 }
 
 const updateGoal = (request, response) => {
