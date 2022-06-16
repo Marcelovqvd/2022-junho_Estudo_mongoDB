@@ -6,3 +6,5 @@ Estudo de desenvolvimento de API Rest com banco de dados MongoDB
 - Mongoose
 - Express
 - Nodemon
+
+Finalizado
