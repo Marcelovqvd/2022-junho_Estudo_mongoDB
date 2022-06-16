@@ -6,11 +6,11 @@ const getGoal = async (request, response) => {
 }
 
 const setGoal = async (request, response) => {
-  // const { newGoal } = request.body
+  const { newGoal } = request.body
 
-    const createGoal = goal.create({
-      newGoal: { user: 'Marcelo', text: 'texto'}
-    })
+  const createGoal = goal.create({
+    newGoal: { user: 'Marcelo', text: 'texto'}
+  })
 
     return response.status(200).json('createGoal')
 }
