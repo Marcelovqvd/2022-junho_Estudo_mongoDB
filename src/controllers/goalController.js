@@ -19,12 +19,33 @@ const setGoal = async (request, response) => {
   return response.status(200).json(createGoal)
 }
 
-const updateGoal = (request, response) => {
-  return response.status(200).json({msg: 'Update goals'})
+const updateGoal = async (request, response) => {
+  const findGoal = await goal.findById(request.params.id)
+
+  if(!findGoal) {
+    response.status(400)
+    throw new Error('Goal not found')
+  }
+
+  const updatedGoal = await goal.findByIdAndUpdate(request.params.id, 
+    request.body, {
+      new: true
+    })
+
+  return response.status(200).json(updatedGoal)
 }
 
-const deleteGoal = (request, response) => {
-  return response.status(200).json({msg: 'Delete goals'})
+const deleteGoal = async (request, response) => {
+  const findGoal = await goal.findById(request.params.id)
+
+  if(!findGoal) {
+    response.status(400)
+    throw new Error('Goal not found')
+  }
+  
+  await findGoal.remove()
+
+  return response.status(200).json({ id: request.params.id})
 }
 
 export { getGoal, setGoal, updateGoal, deleteGoal }

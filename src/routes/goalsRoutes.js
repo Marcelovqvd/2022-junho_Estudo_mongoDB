@@ -4,6 +4,6 @@ import { getGoal, setGoal, updateGoal, deleteGoal } from '../controllers/goalCon
 const goalRoutes = Router()
 
 goalRoutes.get("/", getGoal).post("/", setGoal)
-goalRoutes.put(":id/", updateGoal).delete("/:id", deleteGoal)
+goalRoutes.put("/:id", updateGoal).delete("/:id", deleteGoal)
 
 export { goalRoutes }

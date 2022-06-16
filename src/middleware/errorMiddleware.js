@@ -1,5 +1,5 @@
 const errorHandler = (err, request, response, next) => {
-  const statusCode = res.statusCode ? res.statusCode : 500
+  const statusCode = response.statusCode ? response.statusCode : 500
 
   response.status(statusCode)
 
